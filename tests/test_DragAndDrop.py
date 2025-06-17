@@ -5,7 +5,7 @@ import pytest
 
 
 @pytest.mark.usefixtures("login")
-def test_drag_adn_drop(login):
+def test_drag_and_drop(login):
 
     """Test case for adding and removing elements."""
     drag_and_drop_page = DragAndDropPage(login)

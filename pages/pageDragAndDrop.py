@@ -14,8 +14,6 @@ class DragAndDropPage:
     
         # Perform drag and drop
         actions = ActionChains(self.driver)
-        actions.drag_and_drop(self.source, self.target).perform()
-
 
     def clickDragAndDropLink(self):
         self.driver.find_element(By.XPATH, self.DragAndDropLink).click()
