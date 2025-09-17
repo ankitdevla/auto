@@ -11,5 +11,6 @@ def test_drag_adn_drop(login):
     drag_and_drop_page = DragAndDropPage(login)
     drag_and_drop_page.clickDragAndDropLink()
     drag_and_drop_page.dragAndDrop()
+    drag_and_drop_page.backDriver()
     import time
     time.sleep(10)

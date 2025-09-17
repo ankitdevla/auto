@@ -11,10 +11,6 @@ class DragAndDropPage:
         self.DragAndDropLink = "//a[text() = 'Drag and Drop']"
         self.source = "//div[@id='column-a']"
         self.target = "//div[@id='column-b']"
-    
-        # Perform drag and drop
-        actions = ActionChains(self.driver)
-        actions.drag_and_drop(self.source, self.target).perform()
 
 
     def clickDragAndDropLink(self):
