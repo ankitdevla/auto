@@ -22,7 +22,7 @@ def test_dynamic_control(login):
     dynamic_control_page.clickEnableButton().click()
 
     dynamic_control_page.clickInputBox().send_keys("Hello World")
-    time.sleep(5)
+    # time.sleep(5)
     
 
     dynamic_control_page.backDriver()
