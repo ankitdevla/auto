@@ -28,21 +28,18 @@ def setup():
 def login(setup):
     # Perform login and return the driver
     driver = setup
-    driver.implicitly_wait(10)  # Wait for up to 10 seconds
     driver.get("https://the-internet.herokuapp.com/")
     return driver
     
 
-
-
-def pytest_collection_modifyitems(session, config, items):
-    # Define custom priority order for test files
+# conftest.py
+def pytest_collection_modifyitems(config, items):
+    # Define priority order
     priority = {
-        "test_title.py": 1,
-        "test_AddRemoveElement.py": 2,
-       
+        "test_title": 1,
+        "test_Select": 2,
+        # "test_logout": 3,
     }
-    # Sort test items based on file priority
-    items.sort(key=lambda item: priority.get(item.fspath.basename, 99))  # Default priority = 99 (low)
 
-    
+    # Sort items by priority
+    items.sort(key=lambda item: priority.get(item.name, 999))

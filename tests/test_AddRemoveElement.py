@@ -11,7 +11,6 @@ def test_add_remove_element(login):
     add_remove_element_page = AddRemoveElementPage(login)
     
     # Navigate to the Add/Remove Elements page
-    # login.get("https://the-internet.herokuapp.com/")
     add_remove_element_page.clickAddRemoveElementLink()
     
     # Click the "Add Element" button
