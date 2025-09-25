@@ -7,7 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 import os
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # Suppress TensorFlow logs
+# os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # Suppress TensorFlow logs
 
 
 @pytest.fixture(scope="session")
